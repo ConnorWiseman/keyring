@@ -1,0 +1,311 @@
+/**
+ * General HTML elements.
+ */
+body, html {
+    height: 100%;
+}
+body {
+    background-color: #fbf3f1;
+    color: #322e2b;
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    min-height: 100%;
+}
+header {
+    background-color: #c0392b;
+    border-bottom: 0.125em solid #8c251d;
+    box-sizing: border-box;
+    left: 0;
+    padding: 1em 1.5em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+h1, h2 {
+    color: #fbf3f1;
+    font-family: 'Montserrat', sans-serif;
+}
+h1 {
+    font-size: 1.25em;
+    margin: 0 auto;
+    max-width: 600px;
+}
+h2 {
+    background-color: #322e2b;
+    padding: 0.5em 1em;
+}
+form, label {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+label span {
+    display: none;
+}
+form input, form button {
+    box-sizing: border-box;
+    display: block;
+    line-height: 1.6;
+    margin: 0 auto 1em;
+    max-width: 18em;
+    width: 100%;
+}
+input {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.5em 1em;
+    width: 100%;
+}
+button {
+    border: 0.125em solid transparent;
+    color: #fbf3f1;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.5em 1em;
+    transition: background-color 0.25s ease, border 0.25s ease, color 0.25s ease;
+}
+button:hover, button:active, button:focus {
+    color: #ffffff;
+}
+
+
+/**
+ * Notices and error messages.
+ */
+.notice {
+    margin: 0 auto 2em;
+}
+.error {
+    background-color: #ff8880;
+    bottom: 1.5em;
+    box-sizing: border-box;
+    left: 1.5em;
+    margin: auto;
+    max-width: 600px;
+    padding: 0.5em 1em;
+    position: absolute;
+    right: 1.5em;
+}
+.error p {
+    color: #661b15;
+    font-size: 0.75em;
+    margin: 0;
+}
+
+
+/**
+ * Layout elements.
+ */
+#page-wrapper, #content-wrapper, #content {
+    align-items: center;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    min-height: 100%;
+    width: 100%;
+}
+#page-wrapper, #content-wrapper, #content {
+    display: flex;
+}
+#content-wrapper, #content, #data-contents {
+    flex: 1 1 auto;
+}
+#content-wrapper {
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 4.875em 1.5em 1.5em;
+}
+#content {
+    max-width: 600px;
+    opacity: 1;
+    transition: opacity 0.35s ease;
+}
+#data-contents {
+    max-width: 600px;
+    width: 100%;
+}
+
+
+/**
+ * Input classes.
+ */
+.input {
+    border-bottom: 0.125em solid #c0392b;
+    color: #534f4e;
+    transition: color 0.25s ease;
+}
+.input-wide {
+    max-width: 100%;
+    width: 100%;
+}
+.input:active, input:focus {
+    color: #322e2b;
+}
+
+
+/**
+ * Button classes.
+ */
+.button-red {
+    background-color: #e74c3c;
+    border-color: #c0392b;
+}
+.button-red:hover, .button-red:active, .button-red:focus {
+    background-color: #c0392b;
+    border-color: #8c251d;
+}
+.button-red:disabled {
+    color: #8c251d;
+}
+.button-green {
+    background-color: #76a63f;
+    border-color: #648c35;
+}
+.button-green:hover, .button-green:active, .button-green:focus {
+    background-color: #648c35;
+    border-color: #486627;
+}
+.button-green:disabled {
+    color: #486627;
+}
+.button-round {
+    border-radius: 50%;
+    line-height: 1;
+    font-size: 0.75em;
+    padding: 0.25em 0.5em!important;
+    margin: 0.25em 0 0 0.5em!important;
+}
+.button-small {
+    font-size: 0.75em;
+    margin: 0 0 2em;
+    max-width: auto;
+    width: auto;
+}
+.button-wide {
+    max-width: 100%;
+    width: 100%;
+}
+
+
+/**
+ * Data display classes.
+ */
+.data {
+    position: relative;
+    margin-bottom: 1em;
+    clear: both;
+    width: 100%;
+}
+.data-item {
+    padding: 1em 0 0;
+    box-sizing: border-box;
+}
+.data-item input {
+    font-size: 0.75em;
+}
+
+
+/**
+ * Expandable menu classes.
+ */
+.menu {
+    border: 0.0625em solid #322e2b;
+    border-top: none;
+    box-sizing: border-box;
+    background-color: #fbe9e7;
+    font-size: 0.75em;
+    margin-bottom: 2em;
+    position: absolute;
+    top: 3.45em;
+    right: 0;
+    z-index: -500;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+.menu li {
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 0.5em 1em;
+}
+.menu-link:before {
+    box-sizing: border-box;
+    display: inline-block;
+    float: right;
+    font-size: 1.5em;
+    font-weight: normal;
+    line-height: 1;
+    padding: 0.5em 0.5em;
+    position: absolute;
+    right: -0.25em;
+    top: 0;
+}
+
+
+/**
+ * Key/value widget classes.
+ */
+dl {
+    box-sizing: border-box;
+    clear: both;
+    font-size: 0.75em;
+    overflow: hidden;
+    width: 100%;
+}
+dt, dd {
+    box-sizing: border-box;
+    display: inline-block;
+    float: left;
+    position: relative;
+}
+dt {
+    clear: left;
+    padding: 0.5em 0 1em 0;
+    width: 30%;
+}
+dd {
+    padding: 0.5em 0 1em 1em;
+    width: 70%;
+}
+dl label, dl input {
+    display: inline-block;
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-weight: normal;
+    max-width: 100%;
+}
+.data-key {
+
+}
+.data-val {
+
+}
+.delete-this {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.delete-this:before {
+    color: #c0392b;
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 1.5em;
+    padding: 0.5em;
+}
+
+
+/**
+ * Alignment classes.
+ */
+.right {
+    float: right;
+}
+
+
+/**
+ * Transitions classes. Appended and removed via JavaScript.
+ */
+.fade {
+    opacity: 0!important;
+}
+.menu-visible {
+    opacity: 1!important;
+    z-index: 2!important;
+}

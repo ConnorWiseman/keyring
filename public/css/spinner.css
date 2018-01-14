@@ -1,0 +1,53 @@
+/**
+ * @author Tobias Ahlin
+ * {@link https://github.com/tobiasahlin/SpinKit}
+ */
+
+#spinner {
+    margin: 0 auto;
+    text-align: center;
+}
+#spinner > div {
+    -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+    animation: sk-stretchdelay 1.2s infinite ease-in-out;
+    background-color: #e74c3c;
+    display: inline-block;
+    height: 5em;
+    margin: 0 0.125em;
+    width: 1em;
+}
+#spinner .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+}
+#spinner .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+#spinner .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+#spinner .rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+#spinner-text {
+    color: #e74c3c;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+    0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+    20% { -webkit-transform: scaleY(1.0) }
+}
+@keyframes sk-stretchdelay {
+    0%, 40%, 100% {
+        transform: scaleY(0.4);
+        -webkit-transform: scaleY(0.4);
+    } 20% {
+    transform: scaleY(1.0);
+        -webkit-transform: scaleY(1.0);
+    }
+}
