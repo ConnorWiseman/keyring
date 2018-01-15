@@ -140,7 +140,6 @@
     });
     var decr = aesDecrypt(obj.contents, key, obj.nonce);
     obj.contents = JSON.parse(String.fromCharCode.apply(null, decr));
-    console.log(obj);
     return obj;
   };
 
